@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+#include<iostream>
+#include<cmath>
+#include<string>
+#include<algorithm>
+#include<vector>
+#include<map>
+#include<stack>
+#include<queue>
+#include<fstream>
+#include<iomanip>
+#include<sstream>
+#include<numeric>
+#define fast ios_base::sync_with_stdio(false); cin.tie(nullptr);
+#define ll long long
+#define yes cout<<"YES"<<'\n';
+#define no cout<<"NO"<<'\n';
+using namespace std;
+void solve()
+{
+    int len;
+    string s;
+    cin>>len>>s;
+    int count=0,count1=0;
+    for(int i=0;i<len;i++)
+    {
+        if(s[i]=='x')
+            count++;
+        else
+        {
+            if(count>=3)
+                count1+=count-2;
+            count=0;
+        }
+    }
+    if(count>=3)
+        count1+=count-2;
+    cout<<count1;
+    //978B - File Name(true)
+}
+int main()
+{
+	fast;
+	solve();
+//	int t;
+//	cin>>t;
+//	while(t--)
+//	{
+//		solve();
+//	}
+	return 0;
+}
